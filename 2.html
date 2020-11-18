@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <input type ="number" id ="salario" name ="opcao" placeholder ="Informe o valor do salário" /> 
+    <P id ="atualSalario"></P>
+    <P id ="novoSalario"></P>
+    <button id ="botao1" onclick ="calcular()">Calcular Salário</button>
+    
+    <script>
+
+        function calcular(){
+            var salarios = parseInt(document.getElementById("salario").value)
+            var salarioFinal = 0
+
+            if(salarios >= 0 && salarios < 280){
+                salarioFinal = salarios * 0.20 + salarios
+                alert (`O salário atual é de ${salarioFinal}`)
+            }
+            else{ 
+                if(salarios >= 280 && salarios < 700){
+                    salarioFinal = salarios * 0.15 + salarios
+                    alert (`O salário atual é de ${salarioFinal}`)
+                }
+            else{
+                if(salarios >= 700 && salarios < 1500){
+                    salarioFinal=salarios * 0.1 + salarios
+                    alert (`O salário atual é de ${salarioFinal}`)
+                }
+        
+            else {
+                    salarioFinal=salarios *0.05 + salarios
+                    alert(`O salário atual é de${salarioFinal}`)
+                     
+            }
+
+            }
+
+            }
+
+        document.getElementById("atualSalario").innerHTML=`O salário atual é de${salarios}`
+        document.getElementById("novoSalario").innerHTML=`salario novo${salarios}`
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

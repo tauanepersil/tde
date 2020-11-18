@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input  type = "number" id = "altura" placeholder = "Digite sua altura" />
+    <input type="radio" id="masculino" name="opcao" />
+    <input type="radio" id="feminino" name="opcao" /><br><br>
+
+        <button id="botao1" onclick="calcularIMC()">Calcular IMC</button>
+
+
+    <script>
+        function calcularIMC(){
+            var pesoIdealHomem = document.getElementById("masculino")
+                pesoIdealHomem = 72.7 * (document.getElementById("altura").value) - 58
+                alert(`O peso ideial para o homem é de ${pesoIdealHomem} kg`)
+              
+            var pesoIdealMulher=document.getElementById("feminino")
+                if( pesoIdealMulher = 62.1 * (document.getElementById("altura").value) - 44.7){
+                alert(`O peso ideal para a mulher é ${pesoIdealMulher} kg`)
+                }
+        }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
