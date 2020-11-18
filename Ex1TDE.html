@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="numeroDigitado" type="number" placeholder="Digite um número" />
+    <input id="radioPar" type="radio"  value="par" checked />
+    <input id="radioImpar" type="radio" value="impar" />
+    <button>Jogar</button>
+
+    <script>
+
+        var numeroDoComputador = Math.floor(Math.random()*10);
+        var numero = parseInt(document.getElementById("numeroDigitado").value);
+        var soma = numeroDoComputador + numero;
+        console.log(numeroDoComputador);
+        console.log(numero);
+        console.log(soma);
+
+        var opcoesJogador = document.getElementByName("opcaoJogo");
+        if(opcoesJogador[0].checked){
+            if(soma % 2 === 0 )
+                alert(`Jogador parabéns!! Você ganhou!! Os números jogados foram ${numero} , ${numeroDoComputador} `);
+            else
+                alert(`Computador parabéns!! Você ganhou!! Os números jogados foram ${numero}, ${numeroDoComputador}`)
+            }
+
+            else{
+                if(soma % 2 === 1)
+                alert(`Jogador parabéns!! Você ganhou!! Os números jogados foram ${numero} , ${numeroDoComputador} `);
+            else
+                alert(`Computador parabéns!! Você ganhou!! Os números jogados foram ${numero}, ${numeroDoComputador}`)
+ 
+            }
+
+            console.log(opcoesJogador[0].checked);
+            console.log(opcoesJogador[1].checked);
+
+        
+    </script>
+</body>
+</html>
